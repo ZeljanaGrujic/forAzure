@@ -1,0 +1,31 @@
+package fon.bg.ac.rs.retailApp.models;
+
+//import javax.persistence.Entity;
+//import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
+//import jakarta.persistence.*;
+import javax.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Table(name = "invoice_status")
+@Data
+//@NoArgsConstructor
+//@AllArgsConstructor
+@EqualsAndHashCode(callSuper=false)
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
+public class InvoiceStatus extends CommonObject{
+
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    private Integer id;
+//    private String description;
+//    private String details;
+
+}

@@ -1,0 +1,18 @@
+name: GitHub-Actions-Load-All-Available-Actions
+on: [push]
+jobs:
+  Load-all-available-actions:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Load available actions
+        uses: devops-actions/load-available-actions@v2.0.0
+        with: 
+          PAT: ${{ secrets.GITHUB_TOKEN }}
+          user: ZeljanaGrujic
+        id: load-actions            
+      - name: Display result file content
+        run: |
+          cat ${{ steps.load-actions.outputs.actions-file-path }}
+      - run: echo "Used secret is ${{secrets.GITHUB_TOKEN}}"
+       
+      

@@ -1,0 +1,9 @@
+# Add/remove 'critical' label if issue contains the words 'urgent' or 'critical'
+critical:
+    - '(critical|urgent)'
+bug: 
+    - '(not working|error)'
+needs-updating:
+    - '(old version|update)'
+answer the question:
+    - '/.*/'

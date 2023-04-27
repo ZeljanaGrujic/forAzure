@@ -1,0 +1,18 @@
+name: GitHub-Actions-Start
+on: [push]
+jobs:
+  Start: 
+    runs-on: ubuntu-latest
+    steps: 
+      - run: echo "This is automatically triggered by ${{github.event_name}}"
+      - run: echo "Used OS is ${{runner.os}}"
+      - run: echo "We are on ${{github.ref}} branch, in repository ${{github.repository}}"
+      - name: Checkout-Repository-Code
+        uses: actions/checkout@v3
+      - name: List all files in repo
+        run: ls -l ${{github.workspace}}
+      - run: echo "This job status is ${{job.status}}"
+      - name: List YAML files in my workflows directory
+        run: |
+          find . -name '*.yml' -print
+        working-directory: .github/workflows

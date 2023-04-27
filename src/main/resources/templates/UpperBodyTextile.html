@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+    <meta name="author" content="GeeksLabs">
+    <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>Upravljanje podacima o proizvodu</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- bootstrap theme -->
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <!--external css-->
+    <!-- font icon -->
+    <link href="css/elegant-icons-style.css" rel="stylesheet"/>
+    <link href="css/font-awesome.min.css" rel="stylesheet"/>
+    <!-- Custom styles -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <script src="js/lte-ie7.js"></script>
+    <![endif]-->
+
+    <!-- =======================================================
+      Theme Name: NiceAdmin
+      Theme URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+      Author: BootstrapMade
+      Author URL: https://bootstrapmade.com
+    ======================================================= -->
+</head>
+
+<body>
+<!-- container section start -->
+<section id="container" class="">
+    <!--header start-->
+
+    <header class="header dark-bg">
+        <div class="toggle-nav">
+            <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i
+                    class="icon_menu"></i></div>
+        </div>
+
+        <!--logo start-->
+        <a th:href="@{/index}" class="logo">Butik <span class="lite">BILVA</span></a>
+        <!--logo end-->
+
+        <div class="nav search-row" id="top_menu">
+            <!--  search form start -->
+            <ul class="nav top-menu">
+                <li>
+                    <form class="navbar-form">
+                        <input class="form-control" placeholder="Pretraga..." type="text">
+                    </form>
+                </li>
+            </ul>
+            <!--  search form end -->
+        </div>
+
+        <div class="top-nav notification-row">
+            <!-- notificatoin dropdown start-->
+            <ul class="nav pull-right top-menu">
+
+                <!-- task notificatoin start -->
+                <!--                <li id="task_notificatoin_bar" class="dropdown">-->
+                <!--                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">-->
+                <!--                        <i class="icon-task-l"></i>-->
+                <!--                        <span class="badge bg-important">5</span>-->
+                <!--                    </a>-->
+                <!--                    <ul class="dropdown-menu extended tasks-bar">-->
+                <!--                        <div class="notify-arrow notify-arrow-blue"></div>-->
+                <!--                        <li>-->
+                <!--                            <p class="blue">You have 5 pending tasks</p>-->
+                <!--                        </li>-->
+                <!--                        <li>-->
+                <!--                            <a href="#">-->
+                <!--                                <div class="task-info">-->
+                <!--                                    <div class="desc">Design PSD</div>-->
+                <!--                                    <div class="percent">90%</div>-->
+                <!--                                </div>-->
+                <!--                                <div class="progress progress-striped">-->
+                <!--                                    <div class="progress-bar progress-bar-success" myRole="progressbar" aria-valuenow="90"-->
+                <!--                                         aria-valuemin="0" aria-valuemax="100" style="width: 90%">-->
+                <!--                                        <span class="sr-only">90% Complete (success)</span>-->
+                <!--                                    </div>-->
+                <!--                                </div>-->
+                <!--                            </a>-->
+                <!--                        </li>-->
+                <!--                        <li>-->
+                <!--                            <a href="#">-->
+                <!--                                <div class="task-info">-->
+                <!--                                    <div class="desc">-->
+                <!--                                        Project 1-->
+                <!--                                    </div>-->
+                <!--                                    <div class="percent">30%</div>-->
+                <!--                                </div>-->
+                <!--                                <div class="progress progress-striped">-->
+                <!--                                    <div class="progress-bar progress-bar-warning" myRole="progressbar" aria-valuenow="30"-->
+                <!--                                         aria-valuemin="0" aria-valuemax="100" style="width: 30%">-->
+                <!--                                        <span class="sr-only">30% Complete (warning)</span>-->
+                <!--                                    </div>-->
+                <!--                                </div>-->
+                <!--                            </a>-->
+                <!--                        </li>-->
+                <!--                        <li>-->
+                <!--                            <a href="#">-->
+                <!--                                <div class="task-info">-->
+                <!--                                    <div class="desc">Digital Marketing</div>-->
+                <!--                                    <div class="percent">80%</div>-->
+                <!--                                </div>-->
+                <!--                                <div class="progress progress-striped">-->
+                <!--                                    <div class="progress-bar progress-bar-info" myRole="progressbar" aria-valuenow="80"-->
+                <!--                                         aria-valuemin="0" aria-valuemax="100" style="width: 80%">-->
+                <!--                                        <span class="sr-only">80% Complete</span>-->
+                <!--                                    </div>-->
+                <!--                                </div>-->
+                <!--                            </a>-->
+                <!--                        </li>-->
+                <!--                        <li>-->
+                <!--                            <a href="#">-->
+                <!--                                <div class="task-info">-->
+                <!--                                    <div class="desc">Logo Designing</div>-->
+                <!--                                    <div class="percent">78%</div>-->
+                <!--                                </div>-->
+                <!--                                <div class="progress progress-striped">-->
+                <!--                                    <div class="progress-bar progress-bar-danger" myRole="progressbar" aria-valuenow="78"-->
+                <!--                                         aria-valuemin="0" aria-valuemax="100" style="width: 78%">-->
+                <!--                                        <span class="sr-only">78% Complete (danger)</span>-->
+                <!--                                    </div>-->
+                <!--                                </div>-->
+                <!--                            </a>-->
+                <!--                        </li>-->
+                <!--                        <li>-->
+                <!--                            <a href="#">-->
+                <!--                                <div class="task-info">-->
+                <!--                                    <div class="desc">Mobile App</div>-->
+                <!--                                    <div class="percent">50%</div>-->
+                <!--                                </div>-->
+                <!--                                <div class="progress progress-striped active">-->
+                <!--                                    <div class="progress-bar" myRole="progressbar" aria-valuenow="50" aria-valuemin="0"-->
+                <!--                                         aria-valuemax="100" style="width: 50%">-->
+                <!--                                        <span class="sr-only">50% Complete</span>-->
+                <!--                                    </div>-->
+                <!--                                </div>-->
+
+                <!--                            </a>-->
+                <!--                        </li>-->
+                <!--                        <li class="external">-->
+                <!--                            <a href="#">See All Tasks</a>-->
+                <!--                        </li>-->
+                <!--                    </ul>-->
+                <!--                </li>-->
+                <!-- task notificatoin end -->
+                <!-- inbox notificatoin start-->
+                <!--                <li id="mail_notificatoin_bar" class="dropdown">-->
+                <!--                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">-->
+                <!--                        <i class="icon-envelope-l"></i>-->
+                <!--                        <span class="badge bg-important">5</span>-->
+                <!--                    </a>-->
+                <!--                    <ul class="dropdown-menu extended inbox">-->
+                <!--                        <div class="notify-arrow notify-arrow-blue"></div>-->
+                <!--                        <li>-->
+                <!--                            <p class="blue">You have 5 new messages</p>-->
+                <!--                        </li>-->
+                <!--                        <li>-->
+                <!--                            <a href="#">-->
+                <!--                                <span class="photo"><img alt="avatar" src="./img/avatar-mini.jpg"></span>-->
+                <!--                                <span class="subject">-->
+                <!--                                    <span class="from">Greg  Martin</span>-->
+                <!--                                    <span class="time">1 min</span>-->
+                <!--                                    </span>-->
+                <!--                                <span class="message">-->
+                <!--                                        I really like this admin panel.-->
+                <!--                                    </span>-->
+                <!--                            </a>-->
+                <!--                        </li>-->
+                <!--                        <li>-->
+                <!--                            <a href="#">-->
+                <!--                                <span class="photo"><img alt="avatar" src="./img/avatar-mini2.jpg"></span>-->
+                <!--                                <span class="subject">-->
+                <!--                                    <span class="from">Bob   Mckenzie</span>-->
+                <!--                                    <span class="time">5 mins</span>-->
+                <!--                                    </span>-->
+                <!--                                <span class="message">-->
+                <!--                                     Hi, What is next project plan?-->
+                <!--                                    </span>-->
+                <!--                            </a>-->
+                <!--                        </li>-->
+                <!--                        <li>-->
+                <!--                            <a href="#">-->
+                <!--                                <span class="photo"><img alt="avatar" src="./img/avatar-mini3.jpg"></span>-->
+                <!--                                <span class="subject">-->
+                <!--                                    <span class="from">Phillip   Park</span>-->
+                <!--                                    <span class="time">2 hrs</span>-->
+                <!--                                    </span>-->
+                <!--                                <span class="message">-->
+                <!--                                        I am like to buy this Admin Template.-->
+                <!--                                    </span>-->
+                <!--                            </a>-->
+                <!--                        </li>-->
+                <!--                        <li>-->
+                <!--                            <a href="#">-->
+                <!--                                <span class="photo"><img alt="avatar" src="./img/avatar-mini4.jpg"></span>-->
+                <!--                                <span class="subject">-->
+                <!--                                    <span class="from">Ray   Munoz</span>-->
+                <!--                                    <span class="time">1 day</span>-->
+                <!--                                    </span>-->
+                <!--                                <span class="message">-->
+                <!--                                        Icon fonts are great.-->
+                <!--                                    </span>-->
+                <!--                            </a>-->
+                <!--                        </li>-->
+                <!--                        <li>-->
+                <!--                            <a href="#">See all messages</a>-->
+                <!--                        </li>-->
+                <!--                    </ul>-->
+                <!--                </li>-->
+                <!-- inbox notificatoin end -->
+                <!-- alert notification start-->
+                <!--                <li id="alert_notificatoin_bar" class="dropdown">-->
+                <!--                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">-->
+
+                <!--                        <i class="icon-bell-l"></i>-->
+                <!--                        <span class="badge bg-important">7</span>-->
+                <!--                    </a>-->
+                <!--                    <ul class="dropdown-menu extended notification">-->
+                <!--                        <div class="notify-arrow notify-arrow-blue"></div>-->
+                <!--                        <li>-->
+                <!--                            <p class="blue">You have 4 new notifications</p>-->
+                <!--                        </li>-->
+                <!--                        <li>-->
+                <!--                            <a href="#">-->
+                <!--                                <span class="label label-primary"><i class="icon_profile"></i></span>-->
+                <!--                                Friend Request-->
+                <!--                                <span class="small italic pull-right">5 mins</span>-->
+                <!--                            </a>-->
+                <!--                        </li>-->
+                <!--                        <li>-->
+                <!--                            <a href="#">-->
+                <!--                                <span class="label label-warning"><i class="icon_pin"></i></span>-->
+                <!--                                John location.-->
+                <!--                                <span class="small italic pull-right">50 mins</span>-->
+                <!--                            </a>-->
+                <!--                        </li>-->
+                <!--                        <li>-->
+                <!--                            <a href="#">-->
+                <!--                                <span class="label label-danger"><i class="icon_book_alt"></i></span>-->
+                <!--                                Project 3 Completed.-->
+                <!--                                <span class="small italic pull-right">1 hr</span>-->
+                <!--                            </a>-->
+                <!--                        </li>-->
+                <!--                        <li>-->
+                <!--                            <a href="#">-->
+                <!--                                <span class="label label-success"><i class="icon_like"></i></span>-->
+                <!--                                Mick appreciated your work.-->
+                <!--                                <span class="small italic pull-right"> Today</span>-->
+                <!--                            </a>-->
+                <!--                        </li>-->
+                <!--                        <li>-->
+                <!--                            <a href="#">See all notifications</a>-->
+                <!--                        </li>-->
+                <!--                    </ul>-->
+                <!--                </li>-->
+                <!-- alert notification end-->
+                <!-- user login dropdown start-->
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="profile-ava">
+                                <img alt="" src="img/photos/available.jpg" width="20" height="20">
+                            </span>
+                        <span class="username" th:text="${#authentication.getPrincipal().getUsername()}">Gost</span>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu extended logout">
+                        <div class="log-arrow-up"></div>
+                        <li class="eborder-top">
+                            <a th:href="@{/myProfile}"><i class="icon_profile"></i> Moj profil</a>
+                        </li>
+                        <!--                        <li>-->
+                        <!--                            <a href="#"><i class="icon_mail_alt"></i> My Inbox</a>-->
+                        <!--                        </li>-->
+                        <!--                        <li>-->
+                        <!--                            <a href="#"><i class="icon_clock_alt"></i> Timeline</a>-->
+                        <!--                        </li>-->
+                        <!--                        <li>-->
+                        <!--                            <a href="#"><i class="icon_chat_alt"></i> Chats</a>-->
+                        <!--                        </li>-->
+                        <li>
+                            <a th:href="@{/logout}"><i class="icon_key_alt"></i> Odjavi se</a>
+                        </li>
+                        <!--                        <li>-->
+                        <!--                            <a href="documentation.html"><i class="icon_key_alt"></i> Documentation</a>-->
+                        <!--                        </li>-->
+                        <!--                        <li>-->
+                        <!--                            <a href="documentation.html"><i class="icon_key_alt"></i> Documentation</a>-->
+                        <!--                        </li>-->
+                    </ul>
+                </li>
+                <!-- user login dropdown end -->
+            </ul>
+            <!-- notificatoin dropdown end-->
+        </div>
+    </header>
+    <!--header end-->
+
+    <!--sidebar start-->
+    <aside>
+        <div id="sidebar" class="nav-collapse ">
+            <!-- sidebar menu start-->
+            <ul class="sidebar-menu">
+                <li class="active">
+                    <a class="" th:href="@{/index}">
+                        <i class="icon_house_alt"></i>
+                        <span>Kontrolna tabla</span>
+                    </a>
+                </li>
+
+                <li class="sub-menu">
+                    <a class="" href="javascript:;">
+                        <i class="icon_genius"></i>
+                        <span>Odeca</span>
+                        <span class="menu-arrow arrow_carrot-right"></span>
+                    </a>
+                    <ul class="sub">
+                        <!--                        <li><a class="" th:href="@{/textiles}">Sva odeca</a></li>-->
+                        <li><a class="" th:href="@{/upperBodyTextiles}">Gornji delovi odece</a></li>
+                        <li><a class="" th:href="@{/lowerBodyTextiles}">Donji delovi odece</a></li>
+                    </ul>
+                </li>
+
+                <!--                <li class="sub-menu">-->
+                <!--                    <a class="" href="javascript:;">-->
+                <!--                        <i class="icon_genius"></i>-->
+                <!--                        <span>Odeca - detaljne informacije</span>-->
+                <!--                        <span class="menu-arrow arrow_carrot-right"></span>-->
+                <!--                    </a>-->
+                <!--                    <ul class="sub">-->
+                <!--                        <li><a class="" th:href="@{/textileTypes}">Odeca - kategorije</a></li>-->
+                <!--                        <li><a class="" th:href="@{/textileModels}">Odeca - modeli</a></li>-->
+                <!--                        <li><a class="" th:href="@{/textileMakes}">Odeca - marke</a></li>-->
+                <!--                        <li><a class="" th:href="@{/textileStatuses}">Odeca - status</a></li>-->
+                <!--&lt;!&ndash;                        <li><a class="" th:href="@{/orderedTextiles}">Odeca - narudzbine klijenata</a></li>&ndash;&gt;-->
+                <!--                    </ul>-->
+                <!--                </li>-->
+
+                <!--                <li class="sub-menu">-->
+                <!--                    <a class="" href="javascript:;">-->
+                <!--                        <i class="icon_documents_alt"></i>-->
+                <!--                        <span>Ljudski resursi - podaci</span>-->
+                <!--                        <span class="menu-arrow arrow_carrot-right"></span>-->
+                <!--                    </a>-->
+                <!--                    <ul class="sub">-->
+                <!--                        <li><a class="" th:href="@{/jobTitles}">Naziv i opis radnog mesta</a></li>-->
+                <!--                        <li><a class="" th:href="@{/employeeTypes}">Angazovanje</a></li>-->
+                <!--                    </ul>-->
+                <!--                </li>-->
+
+                <!--                <li class="sub-menu">-->
+                <!--                    <a href="javascript:;" class="">-->
+                <!--                        <i class="icon_desktop"></i>-->
+                <!--                        <span>Stranke</span>-->
+                <!--                        <span class="menu-arrow arrow_carrot-right"></span>-->
+                <!--                    </a>-->
+                <!--                    <ul class="sub">-->
+                <!--                        <li><a class="" th:href="@{/employees}">Zaposleni</a></li>-->
+                <!--                        <li><a class="" th:href="@{/suppliers}">Dobavljaci</a></li>-->
+                <!--                        <li><a class="" th:href="@{/clients}">Klijenti</a></li>-->
+                <!--                        <li><a class="" th:href="@{/contacts}">Kontakti</a></li>-->
+                <!--                    </ul>-->
+                <!--                </li>-->
+
+
+                <!--                <li class="sub-menu">-->
+                <!--                    <a href="javascript:;" class="">-->
+                <!--                        <i class="icon_table"></i>-->
+                <!--                        <span>Fakture</span>-->
+                <!--                        <span class="menu-arrow arrow_carrot-right"></span>-->
+                <!--                    </a>-->
+                <!--                    <ul class="sub">-->
+                <!--                        <li><a class="" th:href="@{/invoicesBuying}">Fakture - kupovina</a></li>-->
+                <!--                        <li><a class="" th:href="@{/invoicesSelling}">Fakture - prodaja</a></li>-->
+                <!--                        <li><a class="" th:href="@{/invoiceStatuses}">Fakture - status</a></li>-->
+                <!--                    </ul>-->
+                <!--                </li>-->
+
+
+                <!--                <li class="sub-menu">-->
+                <!--                    <a href="javascript:;" class="">-->
+                <!--                        <i class="icon_document_alt"></i>-->
+                <!--                        <span>Regioni i lokacije</span>-->
+                <!--                        <span class="menu-arrow arrow_carrot-right"></span>-->
+                <!--                    </a>-->
+                <!--                    <ul class="sub">-->
+                <!--                        <li><a class="" th:href="@{/countries}">Zemlje/Regioni</a></li>-->
+                <!--                        <li><a class="" th:href="@{/locations}">Lokacije</a></li>-->
+                <!--                    </ul>-->
+                <!--                </li>-->
+
+                <!--                <li class="sub-menu">-->
+                <!--                    <a href="javascript:;" class="">-->
+                <!--                        <i class="icon_desktop"></i>-->
+                <!--                        <span>Korisnicki nalozi</span>-->
+                <!--                        <span class="menu-arrow arrow_carrot-right"></span>-->
+                <!--                    </a>-->
+                <!--                    <ul class="sub">-->
+                <!--                        <li><a class="" th:href="@{/users}">Korisnici</a></li>-->
+                <!--                    </ul>-->
+                <!--                </li>-->
+            </ul>
+            <!-- sidebar menu end-->
+        </div>
+    </aside>
+    <!--sidebar end-->
+
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="page-header"><i class="fa fa fa-bars"></i> Stranice</h3>
+                    <ol class="breadcrumb">
+                        <li><i class="fa fa-home"></i><a th:href="@{/index}">Pocetna stranica</a></li>
+                        <li><i class="fa fa-bars"></i>Stranice</li>
+                        <li><i class="fa fa-square-o"></i>Proizvodi</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- page start-->
+            <h1> Pogledajte nas asortiman odevnih komada</h1>
+
+
+            <!--            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal"-->
+            <!--                    data-whatever="@mdo">Novi proizvod-->
+            <!--            </button>-->
+
+            <div th:switch="${textiles}">
+                <h2 th:case="null">Ni jedan proizvod nije dostupan!</h2>
+                <div th:case="*">
+
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Slika modela</th>
+                            <!--                    <th>Id</th>-->
+                            <!--                    <th>Kategorija</th>-->
+                            <th>Model</th>
+                            <th>Marka</th>
+                            <th>Jedinstveni serijski kod</th>
+                            <th>Dostupna kolicina</th>
+                            <th>Cena po komadu(din)</th>
+                            <!--                    <th>Dobavljac</th>-->
+                            <!--                    <th>Izmeni</th>-->
+                            <!--                    <th>Pogledaj detalje</th>-->
+                            <!--                    <th>Izbrisi</th>-->
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="textile : ${textiles}">
+                            <td>
+                                <a id="photoButton" th:href="@{'/img/photos/' + ${textile.photo}}">
+                                    <img th:src="@{'/img/photos/' + ${textile.photo}}" width="40" height="40">
+                                </a>
+                            </td>
+                            <!--                    <td th:text="${textile.id}"></td>-->
+                            <!--                    <td th:text="${textile.textileType.description}"></td>-->
+                            <td th:text="${textile.textileModel.description}"></td>
+                            <td th:text="${textile.textleMake.description}"></td>
+                            <td th:text="${textile.uniqueCode}"></td>
+                            <td th:text="${textile.availableQuantity}"></td>
+                            <td th:text="${textile.piecePrice}"></td>
+                            <!--                    <td th:text="${textile.textileStatus.description}"></td>-->
+                            <!--                    <td th:text="${textile.supplier.fullName}"></td>-->
+                            <!--                    <td th:text="${client.surname}"></td>-->
+                            <!--                    <td th:text="${jobTitle.details}"></td>-->
+                            <!--                    <td>-->
+                            <!--                        <div class="btn-group">-->
+                            <!--                            <a class="btn btn-primary" th:href="@{/textiles/findById/(id=${textile.id})}" id="editButton">Izmeni</a>-->
+                            <!--                        </div>-->
+                            <!--                    </td>-->
+
+                            <!--                    <td>-->
+                            <!--                        <div class="btn-group">-->
+                            <!--                            <a class="btn btn-success" id="detailsButton" th:href="@{/textiles/findById/(id=${textile.id})}">Detalji</a>-->
+                            <!--                        </div>-->
+                            <!--                    </td>-->
+
+                            <!--                    <td>-->
+                            <!--                        <div class="btn-group">-->
+                            <!--                            <a id="deleteButton" class="btn btn-danger" th:href="@{/textiles/deleteById/(id=${textile.id})}">Izbrisi</a>-->
+                            <!--                        </div>-->
+                            <!--                    </td>-->
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+            <!-- page end-->
+        </section>
+    </section>
+    <!--main content end-->
+    <div class="text-right">
+        <div class="credits">
+            <!--
+              All the links in the footer should remain intact.
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
+            -->
+            <!--            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>-->
+        </div>
+    </div>
+</section>
+<!-- container section end -->
+
+<!--<div class="modal fade" id="addModal" tabindex="-1" myRole="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">-->
+<!--    <form th:action="@{/textiles/addNew}" method="post">-->
+<!--        <div class="modal-dialog modal-lg" myRole="document" style="width:70%">-->
+<!--            <div class="modal-content">-->
+<!--                <div class="modal-header">-->
+<!--                    <h5 class="modal-title" id="exampleModalLabel">Dodaj novi proizvod</h5>-->
+<!--                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--                        <span aria-hidden="true">&times;</span>-->
+<!--                    </button>-->
+<!--                </div>-->
+
+<!--                <div class="modal-body">-->
+<!--                    <table width="100%">-->
+<!--                        <tr>-->
+<!--                            <td width="50%">-->
+
+<!--                                <div class="form-group row">-->
+<!--                                    <label for="txtIdAdd" class="col-sm-4 col-form-label">Id: </label>-->
+<!--                                    <div class="col-sm-6">-->
+<!--                                        <input type="text" class="form-control" id="txtIdAdd" name="id" placeholder="Id" disabled>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="form-group row">-->
+<!--                                    <label for="txtUniqueCodeAdd" class="col-sm-4 col-form-label">Jedinstveni kod serije</label>-->
+<!--                                    <div class="col-sm-6">-->
+<!--                                        <input type="text" class="form-control" id="txtUniqueCodeAdd" name="uniqueCode" placeholder="Npr. G45Ted9Pp" required>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+<!--                                <div class="form-group row">-->
+<!--                                    <label for="ddlTypeAdd" class="col-sm-4 col-form-label">Kategorija proizvoda</label>-->
+<!--                                    <div class="col-sm-6">-->
+<!--                                        <select class="form-control" id="ddlTypeAdd" name="textiletypeid">-->
+<!--                                            <option>Izaberi kategoriju</option>-->
+<!--                                            <option th:each="textileType : ${textileTypes}"-->
+<!--                                                    th:value="${textileType.id}"-->
+<!--                                                    th:text="${textileType.description}">-->
+<!--                                            </option>-->
+<!--                                        </select>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+<!--                                <div class="form-group row">-->
+<!--                                    <label for="ddlUseAdd" class="col-sm-4 col-form-label">Namena</label>-->
+<!--                                    <div class="col-sm-6">-->
+<!--                                        <select class="form-control" id="ddlUseAdd" name="purpose">-->
+<!--                                            <option>Namena</option>-->
+<!--                                            <option value="Gornji deo">Gornji deo</option>-->
+<!--                                            <option value="Donji deo">Donji deo</option>-->
+<!--                                        </select>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+<!--                                <div class="form-group row">-->
+<!--                                    <label for="ddlModelAdd" class="col-sm-4 col-form-label">Model proizvoda</label>-->
+<!--                                    <div class="col-sm-6">-->
+<!--                                        <select class="form-control" id="ddlModelAdd" name="textilemodelid">-->
+<!--                                            <option>Izaberi model</option>-->
+<!--                                            <option th:each="textileModel : ${textileModels}"-->
+<!--                                                    th:value="${textileModel.id}"-->
+<!--                                                    th:text="${textileModel.description}">-->
+<!--                                            </option>-->
+<!--                                        </select>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+<!--                                <div class="form-group row">-->
+<!--                                    <label for="ddlMakeAdd" class="col-sm-4 col-form-label">Marka proizvoda</label>-->
+<!--                                    <div class="col-sm-6">-->
+<!--                                        <select class="form-control" id="ddlMakeAdd" name="textilemakeid">-->
+<!--                                            <option>Izaberi marku</option>-->
+<!--                                            <option th:each="textileMake : ${textileMakes}"-->
+<!--                                                    th:value="${textileMake.id}"-->
+<!--                                                    th:text="${textileMake.description}">-->
+<!--                                            </option>-->
+<!--                                        </select>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+<!--                                <div class="form-group row">-->
+<!--                                    <label for="ddlSupplierlAdd" class="col-sm-4 col-form-label">Dobavljac/proizvodjac</label>-->
+<!--                                    <div class="col-sm-6">-->
+<!--                                        <select class="form-control" id="ddlSupplierlAdd" name="supplierid">-->
+<!--                                            <option>Izaberi dobavljaca</option>-->
+<!--                                            <option th:each="supplier : ${suppliers}"-->
+<!--                                                    th:value="${supplier.id}"-->
+<!--                                                    th:text="${supplier.fullName}">-->
+<!--                                            </option>-->
+<!--                                        </select>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+<!--&lt;!&ndash;                                <div class="form-group row">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <label for="flpImageAdd" class="col-sm-4 col-form-label">Izaberite sliku proizvoda: </label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <div class="col-sm-6">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <input type="file" class="form-control-file" id="flpImageAdd" name="photo" placeholder="Slika">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+
+
+<!--                            </td>-->
+<!--                            <td width="50%" style="padding-left:10px">-->
+
+<!--                                <div class="form-group row">-->
+<!--                                    <label for="txtQuantityAdd" class="col-sm-4 col-form-label">Dostupna kolicina</label>-->
+<!--                                    <div class="col-sm-6">-->
+<!--                                        <input type="number" class="form-control" id="txtQuantityAdd" name="availableQuantity">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+<!--                                <div class="form-group row">-->
+<!--                                    <label for="txtPriceAdd" class="col-sm-4 col-form-label">Cena po komadu</label>-->
+<!--                                    <div class="col-sm-6">-->
+<!--                                        <input type="number" class="form-control" id="txtPriceAdd" name="piecePrice" placeholder="Cena po komadu">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+<!--                                <div class="form-group row">-->
+<!--                                    <label for="ddlStatusAdd" class="col-sm-4 col-form-label">Status</label>-->
+<!--                                    <div class="col-sm-6">-->
+<!--                                        <select class="form-control" id="ddlStatusAdd" name="textilestatusid">-->
+<!--                                            <option>Oznaci status</option>-->
+<!--                                            <option th:each="textileStatus : ${textileStatuses}"-->
+<!--                                                    th:value="${textileStatus.id}"-->
+<!--                                                    th:text="${textileStatus.description}">-->
+<!--                                            </option>-->
+<!--                                        </select>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+
+<!--                                <div class="form-group row">-->
+<!--                                    <label for="txtSpecDescriptionAdd" class="col-sm-4 col-form-label">Dodatni detalji:</label>-->
+<!--                                    <div class="col-sm-6">-->
+<!--                                        <textarea type="text" class="form-control" id="txtSpecDescriptionAdd" name="specialDescription"></textarea>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+
+<!--                                <div class="form-group row">-->
+<!--                                    <label for="txtDateAdd" class="col-sm-4 col-form-label">Datum kupovine</label>-->
+<!--                                    <div class="col-sm-6">-->
+<!--                                        <input type="date" class="form-control" id="txtDateAdd" name="acquisitionDate">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+<!--                                <div class="form-group row">-->
+<!--                                    <label for="ddlEmployeeAdd" class="col-sm-4 col-form-label">Odgovorni zaposleni</label>-->
+<!--                                    <div class="col-sm-6">-->
+<!--                                        <select class="form-control" id="ddlEmployeeAdd" name="employeeid">-->
+<!--                                            <option>Odaberite odgovornog zaposlenog</option>-->
+<!--                                            <option th:each="employee : ${employees}"-->
+<!--                                                    th:value="${employee.id}"-->
+<!--                                                    th:text="${employee.nickname}">-->
+<!--                                            </option>-->
+<!--                                        </select>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+<!--                                <div class="form-group row">-->
+<!--                                    <label for="flpImageAdd" class="col-sm-4 col-form-label">Dodaj sliku modela </label>-->
+<!--                                    <div class="col-sm-6">-->
+<!--                                        <input type="file" class="form-control-file" id="flpImageAdd" name="photo"-->
+<!--                                               placeholder="Slika">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+
+<!--                            </td>-->
+<!--                        </tr>-->
+<!--                    </table>-->
+<!--                    <div class="form-group">-->
+<!--                        <button type="submit" class="btn btn-primary">Sacuvaj</button>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="modal-footer">-->
+<!--                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvori</button>-->
+<!--                    &lt;!&ndash;                    <button type="submit" class="btn btn-primary">Save</button>&ndash;&gt;-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </form>-->
+<!--</div>-->
+
+
+<!--<div class="modal fade" id="editModal" tabindex="-1" myRole="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">-->
+<!--    <form th:action="@{/textiles/update}" method="put">-->
+<!--        <div class="modal-dialog modal-lg" myRole="document" style="width:70%">-->
+<!--            <div class="modal-content">-->
+<!--                <div class="modal-header">-->
+<!--                    <h5 class="modal-title" id="exampleEditModalLabel">Izmeni</h5>-->
+<!--                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--                        <span aria-hidden="true">&times;</span>-->
+<!--                    </button>-->
+<!--                </div>-->
+<!--                <div class="modal-body">-->
+<!--                    <form>-->
+<!--                        <table width="100%">-->
+<!--                            <tr>-->
+<!--                                <td width="50%">-->
+
+<!--                                    <div class="form-group row">-->
+<!--                                        <label for="txtIdEdit" class="col-sm-4 col-form-label">Id: </label>-->
+<!--                                        <div class="col-sm-6">-->
+<!--                                            <input type="text" class="form-control" id="txtIdEdit" name="id" readonly>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="form-group row">-->
+<!--                                        <label for="txtUniqueCodeEdit" class="col-sm-4 col-form-label">Jedinstveni kod serije</label>-->
+<!--                                        <div class="col-sm-6">-->
+<!--                                            <input type="text" class="form-control" id="txtUniqueCodeEdit" name="uniqueCode" placeholder="Npr. G45Ted9Pp" required>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+
+<!--                                    <div class="form-group row">-->
+<!--                                        <label for="ddlTypeEdit" class="col-sm-4 col-form-label">Kategorija proizvoda</label>-->
+<!--                                        <div class="col-sm-6">-->
+<!--                                            <select class="form-control" id="ddlTypeEdit" name="textiletypeid">-->
+<!--                                                <option>Izaberi kategoriju</option>-->
+<!--                                                <option th:each="textileType : ${textileTypes}"-->
+<!--                                                        th:value="${textileType.id}"-->
+<!--                                                        th:text="${textileType.description}">-->
+<!--                                                </option>-->
+<!--                                            </select>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+
+<!--                                    <div class="form-group row">-->
+<!--                                        <label for="ddlUseEdit" class="col-sm-4 col-form-label">Namena</label>-->
+<!--                                        <div class="col-sm-6">-->
+<!--                                            <select class="form-control" id="ddlUseEdit" name="purpose">-->
+<!--                                                <option>Namena</option>-->
+<!--                                                <option value="Gornji deo">Gornji deo</option>-->
+<!--                                                <option value="Donji deo">Donji deo</option>-->
+<!--                                            </select>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+
+<!--                                    <div class="form-group row">-->
+<!--                                        <label for="ddlModelEdit" class="col-sm-4 col-form-label">Model proizvoda</label>-->
+<!--                                        <div class="col-sm-6">-->
+<!--                                            <select class="form-control" id="ddlModelEdit" name="textilemodelid">-->
+<!--                                                <option>Izaberi model</option>-->
+<!--                                                <option th:each="textileModel : ${textileModels}"-->
+<!--                                                        th:value="${textileModel.id}"-->
+<!--                                                        th:text="${textileModel.description}">-->
+<!--                                                </option>-->
+<!--                                            </select>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+
+<!--                                    <div class="form-group row">-->
+<!--                                        <label for="ddlMakeEdit" class="col-sm-4 col-form-label">Marka proizvoda</label>-->
+<!--                                        <div class="col-sm-6">-->
+<!--                                            <select class="form-control" id="ddlMakeEdit" name="textilemakeid">-->
+<!--                                                <option>Izaberi marku</option>-->
+<!--                                                <option th:each="textileMake : ${textileMakes}"-->
+<!--                                                        th:value="${textileMake.id}"-->
+<!--                                                        th:text="${textileMake.description}">-->
+<!--                                                </option>-->
+<!--                                            </select>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+
+<!--                                    <div class="form-group row">-->
+<!--                                        <label for="ddlSupplierlEdit" class="col-sm-4 col-form-label">Dobavljac/proizvodjac</label>-->
+<!--                                        <div class="col-sm-6">-->
+<!--                                            <select class="form-control" id="ddlSupplierlEdit" name="supplierid">-->
+<!--                                                <option>Izaberi dobavljaca</option>-->
+<!--                                                <option th:each="supplier : ${suppliers}"-->
+<!--                                                        th:value="${supplier.id}"-->
+<!--                                                        th:text="${supplier.fullName}">-->
+<!--                                                </option>-->
+<!--                                            </select>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+
+<!--&lt;!&ndash;                                    <div class="form-group row">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <label for="flpImageEdit" class="col-sm-4 col-form-label">Izaberite sliku proizvoda: </label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <div class="col-sm-6">&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <input type="file" class="form-control-file" id="flpImageEdit" name="photo" placeholder="Slika">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </div>&ndash;&gt;-->
+
+<!--                                </td>-->
+
+<!--                                <td width="50%" style="padding-left:10px">-->
+
+<!--                                    <div class="form-group row">-->
+<!--                                        <label for="txtQuantityEdit" class="col-sm-4 col-form-label">Dostupna kolicina</label>-->
+<!--                                        <div class="col-sm-6">-->
+<!--                                            <input type="number" class="form-control" id="txtQuantityEdit" name="availableQuantity">-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+
+<!--                                    <div class="form-group row">-->
+<!--                                        <label for="txtPriceEdit" class="col-sm-4 col-form-label">Cena po komadu</label>-->
+<!--                                        <div class="col-sm-6">-->
+<!--                                            <input type="number" class="form-control" id="txtPriceEdit" name="piecePrice" placeholder="Cena po komadu">-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+
+<!--                                    <div class="form-group row">-->
+<!--                                        <label for="ddlStatusEdit" class="col-sm-4 col-form-label">Status</label>-->
+<!--                                        <div class="col-sm-6">-->
+<!--                                            <select class="form-control" id="ddlStatusEdit" name="textilestatusid">-->
+<!--                                                <option>Oznaci status</option>-->
+<!--                                                <option th:each="textileStatus : ${textileStatuses}"-->
+<!--                                                        th:value="${textileStatus.id}"-->
+<!--                                                        th:text="${textileStatus.description}">-->
+<!--                                                </option>-->
+<!--                                            </select>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+
+
+<!--                                    <div class="form-group row">-->
+<!--                                        <label for="txtSpecDescriptionEdit" class="col-sm-4 col-form-label">Dodatni detalji:</label>-->
+<!--                                        <div class="col-sm-6">-->
+<!--                                            <textarea type="text" class="form-control" id="txtSpecDescriptionEdit" name="specialDescription"></textarea>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+
+
+<!--                                    <div class="form-group row">-->
+<!--                                        <label for="txtDateEdit" class="col-sm-4 col-form-label">Datum kupovine</label>-->
+<!--                                        <div class="col-sm-6">-->
+<!--                                            <input type="date" class="form-control" id="txtDateEdit" name="acquisitionDate">-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+
+<!--                                    <div class="form-group row">-->
+<!--                                        <label for="ddlEmployeeEdit" class="col-sm-4 col-form-label">Odgovorni zaposleni</label>-->
+<!--                                        <div class="col-sm-6">-->
+<!--                                            <select class="form-control" id="ddlEmployeeEdit" name="employeeid">-->
+<!--                                                <option>Odaberite odgovornog zaposlenog</option>-->
+<!--                                                <option th:each="employee : ${employees}"-->
+<!--                                                        th:value="${employee.id}"-->
+<!--                                                        th:text="${employee.nickname}">-->
+<!--                                                </option>-->
+<!--                                            </select>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+
+
+<!--                                    <div class="form-group row">-->
+<!--                                        <label for="flpImageEdit" class="col-sm-4 col-form-label">Dodaj sliku modelag </label>-->
+<!--                                        <div class="col-sm-6">-->
+<!--                                            <input type="file" class="form-control-file" id="flpImageEdit" name="photo"-->
+<!--                                                   placeholder="Slika">-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+
+<!--                                </td>-->
+<!--                            </tr>-->
+<!--                        </table>-->
+<!--                        <div class="form-group">-->
+<!--                            <button type="submit" class="btn btn-primary">Sacuvaj izmene</button>-->
+<!--                        </div>-->
+<!--                    </form>-->
+<!--                </div>-->
+<!--                <div class="modal-footer">-->
+<!--                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvori</button>-->
+<!--                    &lt;!&ndash;                    <button type="submit" class="btn btn-primary">Save</button>&ndash;&gt;-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </form>-->
+<!--</div>-->
+
+
+<!--<div class="modal fade" id="detailsModal" tabindex="-1" myRole="dialog" aria-labelledby="ModalLabel" aria-hidden="true">-->
+<!--    <form>-->
+<!--        <div class="modal-dialog" myRole="document">-->
+<!--            <div class="modal-content">-->
+<!--                <div class="modal-header">-->
+<!--                    <h5 class="modal-title" id="editModalLabel">Detalji</h5>-->
+<!--                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--                        <span aria-hidden="true">&times;</span>-->
+<!--                    </button>-->
+<!--                </div>-->
+<!--                <div class="modal-body">-->
+
+<!--                    <div class="form-group">-->
+<!--                        <label class="col-form-label">Id:</label>-->
+<!--                        <input type="text" class="form-control" id="idDetails" name="id" readonly>-->
+<!--                    </div>-->
+
+<!--                    <div class="form-group row">-->
+<!--                        <label for="quantityDetails" class="col-sm-4 col-form-label">Dostupna kolicina</label>-->
+<!--                        <div class="col-sm-6">-->
+<!--                            <input type="text" class="form-control" id="quantityDetails" name="availableQuantity" readonly>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                    <div class="form-group row">-->
+<!--                        <label for="statusTypeDetails" class="col-sm-4 col-form-label">Status</label>-->
+<!--                        <div class="col-sm-6">-->
+<!--                            <input type="text" class="form-control" id="statusTypeDetails" name="description" readonly>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                    <div class="form-group row">-->
+<!--                        <label for="statusMeaningDetails" class="col-sm-4 col-form-label">Status - detalji</label>-->
+<!--                        <div class="col-sm-6">-->
+<!--                            <textarea type="text" class="form-control" id="statusMeaningDetails" name="details" readonly></textarea>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                    <div class="form-group row">-->
+<!--                        <label for="dateDetails" class="col-sm-4 col-form-label">Datum kupovine</label>-->
+<!--                        <div class="col-sm-6">-->
+<!--                            <input type="date" class="form-control" id="dateDetails" name="acquisitionDate" readonly>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                    <div class="form-group row">-->
+<!--                        <label for="priceDetails" class="col-sm-4 col-form-label">Cena po komadu</label>-->
+<!--                        <div class="col-sm-6">-->
+<!--                            <input type="number" class="form-control" id="priceDetails" name="piecePrice" placeholder="Cena po komadu" readonly>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                    <div class="form-group row">-->
+<!--                        <label for="specialDescriptionDetails" class="col-sm-4 col-form-label">Dodatni detalji:</label>-->
+<!--                        <div class="col-sm-6">-->
+<!--                            <textarea type="text" class="form-control" id="specialDescriptionDetails" name="specialDescription" readonly></textarea>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+
+<!--                    <div class="form-group row">-->
+<!--                        <label for="supplierDetails" class="col-sm-4 col-form-label">Dobavljac</label>-->
+<!--                        <div class="col-sm-6">-->
+<!--                            <input type="text" class="form-control" id="supplierDetails" name="fullName" readonly>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                    <div class="form-group row">-->
+<!--                        <label for="companyDetails" class="col-sm-4 col-form-label">Firma dobavljaca</label>-->
+<!--                        <div class="col-sm-6">-->
+<!--                            <input type="text" class="form-control" id="companyDetails" name="companyName" readonly>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                    <div class="form-group">-->
+<!--                        <label for="phoneDetails" class="col-form-label">Kontakt telefon</label>-->
+<!--                        <textarea type="text" class="form-control" id="phoneDetails" name="phone" readonly></textarea>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+<!--                <div class="modal-footer">-->
+<!--                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvori</button>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </form>-->
+<!--</div>-->
+
+
+<!--<div class="modal" tabindex="-1" myRole="dialog" id="deleteModal">-->
+<!--    <div class="modal-dialog" myRole="document">-->
+<!--        <div class="modal-content">-->
+<!--            <div class="modal-header">-->
+<!--                <h5 class="modal-title">Brisanje</h5>-->
+<!--                <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--                    <span aria-hidden="true">&times;</span>-->
+<!--                </button>-->
+<!--            </div>-->
+<!--            <div class="modal-body">-->
+<!--                <p>Da li sigurno zelite da izbrisete ove podatke?</p>-->
+<!--            </div>-->
+<!--            <div class="modal-footer">-->
+<!--                <a href="" class="btn btn-primary" id="confirmDeleteButton">Izbrisi</a>-->
+<!--                <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvori</button>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<div class="modal fade" tabindex="-1" myRole="dialog" id="photoModal">
+    <div class="modal-dialog" myRole="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Slika</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img id="textilePhoto" src="" width="90%" height="90%">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvori</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- javascripts -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- nice scroll -->
+<script src="js/jquery.scrollTo.min.js"></script>
+<script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+<!--custome script for all page-->
+<script src="js/scripts.js"></script>
+<script src="js/UpperBodyTextile.js"></script>
+
+
+</body>
+
+</html>

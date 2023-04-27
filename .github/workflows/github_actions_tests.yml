@@ -1,0 +1,23 @@
+name: Building project
+
+on:
+  push:
+    branches: [ tests2_feature_java1.8 ]
+  pull_request:
+    branches: [ tests2_feature_java1.8 ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up JDK 8
+      uses: actions/setup-java@v1
+      with:
+        java-version: '8'
+
+    - name: Build with Maven
+      run: mvn clean install
