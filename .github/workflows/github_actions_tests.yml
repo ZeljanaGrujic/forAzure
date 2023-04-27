@@ -2,9 +2,9 @@ name: Building project
 
 on:
   push:
-    branches: [ tests2_feature_java1.8 ]
+    branches: [ master ]
   pull_request:
-    branches: [ tests2_feature_java1.8 ]
+    branches: [ master ]
 
 jobs:
   build:
