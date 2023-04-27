@@ -18,6 +18,7 @@ public class RetailAppApplication {
         Locale.setDefault(Locale.ITALIAN);
         TimeZone.setDefault(TimeZone.getTimeZone("Europe/Rome"));
         SpringApplication.run(RetailAppApplication.class, args);
+        //adding comment so I can push again
     }
 
 }
