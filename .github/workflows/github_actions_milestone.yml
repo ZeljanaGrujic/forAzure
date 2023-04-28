@@ -1,15 +1,12 @@
-name: Create Milestone on Push
+name: Create and Save Milestone on Push
 
 on:
   push:
     branches:
-      - main
-
-env:
-  MILESTONE_TITLE: Milestone for check
+      - master
 
 jobs:
-  create_milestone:
+  create_and_save_milestone:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -18,18 +15,19 @@ jobs:
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
 
-      - name: Create Milestone
+      - name: Create or Update Milestone
         id: milestone
-        uses: peter-evans/create-or-update-milestone@v1
+        uses: peter-evans/create-or-update-milestone@v1.2.1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          title: ${{ env.MILESTONE_TITLE }}
-          due_date: ${{ steps.date.outputs.date }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          title: Milestone for check
+          due-on: ${{ github.event.head_commit.timestamp }}
 
-      - name: Get Milestones
-        id: milestones
-        run: echo "::set-output name=milestones::$(jq -c '.[] | {title: .title, due_date: .due_on}' milestones.json | jq -s)"
+      - name: Save Milestone
+        if: ${{ success() }}
+        run: echo "${{ steps.milestone.outputs.number }}|${{ steps.milestone.outputs.title }}|${{ steps.milestone.outputs.due_on }}" >> milestones.txt
 
-      - name: Display Milestones
-        run: echo "${{ steps.milestones.outputs.milestones }}"
+      - name: Display All Milestones
+        run: cat milestones.txt
+
 
