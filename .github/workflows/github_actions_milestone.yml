@@ -1,0 +1,24 @@
+name: Daly Milestones
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Schedule Milestones
+        uses: readmeio/scheduled-milestones@v1
+        id: scheduled
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: Up for Review
+          days: Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday
+          date_options: '{"month": "long", "day": "numeric"}'
+
+      - name: Created Milestones
+        run: echo ${{ steps.scheduled.outputs.milestones }}
