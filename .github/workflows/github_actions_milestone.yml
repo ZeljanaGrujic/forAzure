@@ -17,7 +17,7 @@ jobs:
 
       - name: Create or Update Milestone
         id: milestone
-        uses: peter-evans/create-or-update-milestone@v1.2.1
+        uses: actions/create-milestone@v1
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           title: Milestone for check
