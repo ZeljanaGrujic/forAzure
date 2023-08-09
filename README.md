@@ -1,5 +1,5 @@
 # Butik - BILVA simple application for sharing and tracking business informations for my family's retail business. 
-
+Simple changeeee
 This is a simple web application, for tracking details for textiles on stock, employees, HR details about employees, invoices, ordering and selling textiles made with Java/Spring Boot and Bootstrap, created for the needs of my dear family who runs retail business.
 
 # Where did the initial idea come from?
